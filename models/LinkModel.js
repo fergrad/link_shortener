@@ -13,9 +13,12 @@ module.exports = {
         return rows;
     },
     addLink: async (site_name, original_url, alias, expires_at) => {
-
-        const [rows] = await kapcsolat.query(`INSERT INTO short_links (site_name, original_url, alias, expires_at) VALUES (?, ?, ?, ${expires_at.length == 0 ? "NULL" : '?'})`, [site_name, original_url, alias, expires_at]);
-        return {rows};
+        try {            
+            const [rows] = await kapcsolat.query(`INSERT INTO short_links (site_name, original_url, alias, expires_at) VALUES (?, ?, ?, ${expires_at.length == 0 ? "NULL" : '?'})`, [site_name, original_url, alias, expires_at]);
+            return {rows};
+        } catch (error) {
+            return {error: error};
+        }
     },
     getLinkByAlias: async (alias) => {
         const [rows] = await kapcsolat.query("SELECT * FROM short_links WHERE alias = ?", [alias]);

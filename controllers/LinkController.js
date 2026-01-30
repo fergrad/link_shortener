@@ -14,7 +14,7 @@ exports.addURL = async (req, res) => {
     const {site_name, original_url, alias, expires_at} = req.body
     try {
         const response = await LinkModel.addLink(site_name, original_url, alias, expires_at)
-        res.redirect('/')
+        res.json(response);
     } catch (error) {
         console.log(error);
         res.status(500).json({ error: 'Internal Server Error' });   

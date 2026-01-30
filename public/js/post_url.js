@@ -19,6 +19,12 @@ function postUrl() {
             headers: {"content-type": "application/json"}
         }
     )
+    .then(response => response.json())
+    .then(data => {
+        if (data.error) {
+            alert("Error adding URL: Make sure alias is unique and expiration date is not in the past.")
+        }   
+    })
     fetchSavedUrls()
 }
 
