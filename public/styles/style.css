@@ -1,0 +1,143 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+*{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#saved_links{
+    list-style-type: none;
+    width: 80%;
+}
+
+.link-item{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    text-overflow: ellipsis;
+}
+
+.icon{
+    width: 30px;
+    height: 30px;
+}
+
+.original_link{
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 25%;
+}
+
+.equal_width{
+    width: 10%;
+}
+
+/*nice and modern text intput field*/
+input[type="text"]{
+    padding: 10px;
+    margin: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 300px;
+    font-size: 16px;
+}
+
+/*nice and modern submit button*/
+#shorten_button{
+    padding: 10px 20px;
+    margin: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #28a745;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+/*nice and modern date input*/
+input[type="date"]{
+    padding: 10px;
+    margin: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+/*modern card style, horizontal*/
+.link-item{
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+/*modern card style with hover, horizontal*/
+.link-item:hover{
+    background-color: #f1f1f1;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+/*modern delete button*/
+.delete_btn{
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #dc3545;
+    color: white;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+/*modern delete button hover*/
+.delete_btn:hover{ 
+    background-color: #c82333;
+    transition: 0.3s;
+}
+
+#shorten_url_form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+#shorten_url_form > *{
+    width: 100%;
+}
+
+.container
+{
+    width: 60%;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+ul{
+    padding: 0;
+}
+
+/*responsive design link-items*/
+@media (max-width: 768px) {
+    .link-item{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .original_link, .equal_width{
+        width: 100%;
+        margin-bottom: 10px;
+    }
+}
