@@ -2,7 +2,7 @@
 
 ## A link shortener you can self-host or just run it on your localhost
 
-Before installing, import the project's SQL file (link_shortener.sql) to your favourite DB manager
+Before installing, import the project's SQL file (link_shortener.sql) from /db to your favourite DB manager
 
 ## Installation:
 ```
