@@ -1,9 +1,11 @@
 # Link-shortener
 
-## A link shortener you can self-host or just run it on your localhost
+## A lightweight link shortener you can self-host or just run it on your localhost
+#### Made in ExpressJS
 
 Before installing, import the project's SQL file (link_shortener.sql) from /db to your favourite DB manager. 
-Important: Name the database "link-shortener"
+#### Important: Name the database "link-shortener"
+#### This is a single user application
 
 ## Installation:
 ```
@@ -20,3 +22,4 @@ Visit localhost:3000 in your browser
 
 Enjoy!
 
+![Screenshot](screenshots/screenshot.png)
