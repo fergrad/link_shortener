@@ -44,7 +44,7 @@ async function fetchSavedUrls() {
                     originalLink.classList.add("original_link")
 
                     const alias = document.createElement('a');
-                    alias.href = `localhost:3000/${link.alias}`;
+                    alias.href = `/${link.alias}`;
                     alias.textContent = `${link.alias}`;
                     alias.target = '_blank';
                     alias.classList.add("equal_width")
